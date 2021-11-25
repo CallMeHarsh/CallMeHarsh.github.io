@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #2c2d31;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+button {
+  padding: 1.1rem;
+  width: 13rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0.3rem;
+  position: relative;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+button .text {
+  z-index: 1;
+  position: relative;
+}
+
+button svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  fill: #000000;
+  fill-opacity: 0.3;
+  animation: wave 1s linear infinite;
+  width: 20rem;
+}
+
+button svg:nth-child(2) {
+  animation: wave2 5s linear infinite;
+}
+
+button .progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0.2rem;
+  animation: progress 2s linear infinite;
+}
+
+@keyframes wave {
+  50% {
+    transform: rotate(1deg) translateX(-108px);
+  }
+  100% {
+    transform: rotate(0deg) translateX(0px);
+  }
+}
+
+@keyframes wave2 {
+  50% {
+    transform: translateX(-58px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes progress {
+  0% {
+    width: 1px;
+  }
+  100% {
+    width: 100%;
+  }
+}
